@@ -66,7 +66,7 @@ function showLoadingScreen() {
         setTimeout(hideLoadingScreen, 1100);
         break;
     }
-  }, 500);
+  }, 500)  
 }
 
 
@@ -74,10 +74,19 @@ function showLoadingScreen() {
 function hideLoadingScreen() {
   const loadingOverlay = document.getElementById('loading-overlay');
   loadingOverlay.style.display = 'none';
+
+    // Show the menu
+    document.getElementById('menu').style.display = 'block';
 }
 
 // Call showLoadingScreen() to display the loading screen initially
 showLoadingScreen();
+
+function showGameContainer() {
+  document.getElementById('menu').style.display = 'none';
+  document.getElementById('game-container').style.display = 'block';
+}
+
 
 // Define the list of words to use
 const words = [
